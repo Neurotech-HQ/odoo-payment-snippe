@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">account.move.form.snippe</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <field name="snippe_can_request_payment" invisible="1"/>
+                <button name="action_snippe_request_payment"
+                        type="object"
+                        string="Request mobile money payment"
+                        invisible="not snippe_can_request_payment"
+                        groups="account.group_account_invoice"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

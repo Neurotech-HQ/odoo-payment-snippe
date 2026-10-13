@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="snippe_push_wizard_form" model="ir.ui.view">
+        <field name="name">payment.snippe.push.wizard.form</field>
+        <field name="model">payment.snippe.push.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="move_id"/>
+                    <field name="partner_id"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="amount_residual" string="Still owed"/>
+                    <field name="amount" required="1"/>
+                    <field name="phone" widget="phone" required="1"/>
+                </group>
+                <footer>
+                    <button name="action_send" type="object" string="Send prompt" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

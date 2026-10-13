@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_method_snippe_mobile_money" model="payment.method">
+        <field name="name">Mobile money</field>
+        <field name="code">snippe_mobile_money</field>
+        <field name="sequence">10</field>
+        <field name="image" type="base64" file="payment_snippe/static/description/mobile_money.png"/>
+        <field name="support_tokenization">False</field>
+        <field name="support_express_checkout">False</field>
+        <field name="support_refund">none</field>
+        <field name="supported_country_ids" eval="[Command.set([ref('base.tz')])]"/>
+        <field name="supported_currency_ids" eval="[Command.set([ref('base.TZS')])]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,23 @@
+{
+    "name": "Payment Provider: Snippe",
+    "version": "18.0.1.0.0",
+    "category": "Accounting/Payment Providers",
+    "sequence": 350,
+    "summary": "Mobile money and card payments in Tanzania through Snippe.",
+    "description": " ",
+    "author": "Neurotech Africa",
+    "website": "https://snippe.sh",
+    "depends": ["payment", "account_payment"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/payment_snippe_templates.xml",
+        "views/payment_provider_views.xml",
+        "wizards/snippe_push_wizard_views.xml",
+        "views/account_move_views.xml",
+        "data/payment_method_data.xml",
+        "data/payment_provider_data.xml",
+    ],
+    "post_init_hook": "post_init_hook",
+    "uninstall_hook": "uninstall_hook",
+    "license": "LGPL-3",
+}
